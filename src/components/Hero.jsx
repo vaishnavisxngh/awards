@@ -32,11 +32,10 @@ const Hero = () => {
     }
 
     useEffect(() => {
-        if(loadedVideo === totalVideos -1) {
+        if(loadedVideo === totalVideos) {
             setIsLoading(false) ;
         }
-
-    })
+    } , [loadedVideo]);
 
     useGSAP( () => {
         if(hasClicked){

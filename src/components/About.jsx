@@ -31,13 +31,13 @@ const About = () => {
                 Hello There
             </h2>
 
-            <AnimatedTitle title="Disc<b>o</b>ver my w<b>o</b>rld <br /> My sh<b>a</b>red adventure"
+            <AnimatedTitle title="  About Me "
             containerClass = "mt-5 !text-black text-center"/>
         
             <div className="about-subtext">
-                <p>The Game of games begins-your life , now an epic MMORPG</p>
+                <p>Curious mind sculpting visuals where design breathes life into code</p>
                 <p>
-                    Zentry unites every player from countless games and platforms
+                    DESIGNER | DEVELOPER | DUMBASS
                 </p>
             </div>
         </div>
