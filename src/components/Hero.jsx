@@ -1,5 +1,11 @@
 import { useState, useRef } from 'react';
 import React from 'react';
+import Button from './Button'; // Assuming Button is in a file named Button.js or Button.jsx in the same directory
+import { TiLocationArrow } from 'react-icons/ti';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap' ;
+
+// ... rest of your Hero component code
 
 const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(1);
@@ -22,6 +28,28 @@ const Hero = () => {
         setHasClicked(true);
         setCurrentIndex(upcomingVideoIndex);
     }
+
+    useGSAP( () => {
+        if(hasClicked){
+            gsap.set('#next-video' , {visibility: 'visible'}) ;
+            gsap.to('#next-video' , {
+                transformOrigin: 'center center',
+                scale: 1,
+                width: '100%',
+                height:'100%',
+                duration:1,
+                ease: 'power1.inOut',
+                onStart: () => nextVideoRef.current.play(),
+            }) 
+            gsap.from('#current-video',{
+                transformOrigin: 'center center' ,
+                scale: 0,
+                duration: 1.5,
+                ease:'power1.inOut',
+            })
+        }
+
+    }, { dependencies: [currentIndex] , revertOnUpdate: true})
 
     const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
 
@@ -53,9 +81,29 @@ const Hero = () => {
                     />
                   <video
                   src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
+                  autoPlay
+                  loop
+                  muted
+                  className="absolute left-0 top-0 size-full object-cover object-center"
+                  onLoadedData={handleVideoLoad}
                   />
             </div>
+            <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
+                S<b>I</b>ngh
+            </h1>
+            <div className="absolute left-0 z-40 size-full">
+                <div className="mt-24 px5 sm:px-10">
+                    <h1 className="special-font hero-heading text-blue-100">
+                        Vaish<b>n</b>avi</h1>
+                        <p className="mb-5 max-w-64 font-robert-regular text-blue-100"> Enter the Metagame Layer 
+                            <br/> Unleash the Play Economy </p>
+                            <Button id="watch-trailer" title="Watch Trailer" leftIcon={<TiLocationArrow/>} containerClass="!bg-yellow-300 flex-center gap-1" />
+                </div>
+            </div>
         </div>
+        <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
+                S<b>I</b>ngh
+            </h1>
     </div>
     )
 }
