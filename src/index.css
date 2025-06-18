@@ -26,6 +26,10 @@ body {
     font-family: 'rober-regular';
     src: url('/fonts/rober-regular.woff2') format('woff2') ;
   }
+  @font-face {
+    font-family: 'zentry-regular' ;
+    src: url('/fonts/zentry-regular.woff2') format('woff2') ;
+  }
 }
 @layer utilities {
   .border-hsla {
@@ -53,7 +57,7 @@ body {
   }
 
   .special-font b {
-    font-family: "Zentry";
+    font-family: "zentry-regular";
     font-feature-settings: "ss01" on;
   }
 

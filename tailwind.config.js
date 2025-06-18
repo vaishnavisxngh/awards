@@ -9,7 +9,7 @@ export default {
       fontFamily: {
         zentry: ['zentry' , 'sanf-serif'] ,
         general: ['regular' , 'sans-serif' ],
-        'cicular-web': ['circular-web' , 'sanf-serif'] ,
+        'circular-web': ['circular-web' , 'sanf-serif'] ,
         'robert-medium' : ['robert-medium','sanf-serif'],
         'robert-regular' : ['robert-regular','sanf-serif'],
       },
