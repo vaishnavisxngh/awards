@@ -5,7 +5,7 @@ import Button from './Button';
 import { TiLocationArrow } from 'react-icons/ti';
 gsap.registerPlugin(ScrollTrigger);
 
-const NavItems = ['Home', 'About' , 'Work' , 'Services', 'Contact'] ;
+const NavItems = ['Nexus', 'Vault' , 'Prologue' , 'About', 'Contact'] ;
 
 const Navbar = () => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -35,11 +35,10 @@ const Navbar = () => {
             <img src="/img/logo.png" alt="Logo" 
             className="w-10"/>
             <Button 
-  id="resume-button"
-  title="Resume"
+  id="project-button"
+  title="Projects"
   containerClass="!bg-yellow-300 md:flex items-center gap-1"
   className=" !text-black  transition-colors duration-300"
-  onClick={() => window.open('/resume.pdf', '_blank', 'noopener,noreferrer')}
 />
     
             </div>

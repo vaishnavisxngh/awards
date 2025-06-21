@@ -31,13 +31,13 @@ const About = () => {
                 Hello There
             </h2>
 
-            <AnimatedTitle title="  About Me "
+            <AnimatedTitle title="Dicover This World"
             containerClass = "mt-5 !text-black text-center"/>
         
             <div className="about-subtext">
-                <p>Curious mind sculpting visuals where design breathes life into code</p>
+                <p>The Metagame begins-your life, a new MMORPG</p>
                 <p>
-                    DESIGNER | DEVELOPER | DUMBASS
+                    Zentry is an unified play layer driving attention and contribution
                 </p>
             </div>
         </div>
