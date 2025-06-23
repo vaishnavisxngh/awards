@@ -31,7 +31,7 @@ const About = () => {
                 Hello There
             </h2>
 
-            <AnimatedTitle title="Dicover This World"
+            <AnimatedTitle title="Discover The World"
             containerClass = "mt-5 !text-black text-center"/>
         
             <div className="about-subtext">
