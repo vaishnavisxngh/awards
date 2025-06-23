@@ -12,13 +12,13 @@ const handleMouseMove = (e) => {
   const relativeX = (e.clientX - left) / width ;
   const relativeY = (e.clientY - top) / height ;
 
-  const tiltX = (relativeY - 0.5) * 20;
-  const tiltY = (relativeX - 0.5) * -20;
+  const tiltX = (relativeY - 0.5) * 10;
+  const tiltY = (relativeX - 0.5) * -10;
 
   const newTransfrom = `perspective(700px) 
   rotateX(${tiltX}deg) 
   rotateY(${tiltY}deg) 
-  scale3d(0.95,0.95,0.95)` ;
+  scale3d(0.98,0.98,0.98)` ;
   
   setTransformStyle(newTransfrom)
 }
