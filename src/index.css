@@ -1,7 +1,7 @@
+@import url("https://fonts.cdnfonts.com/css/general-sans") ;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.cdnfonts.com/css/general-sans") ;
 
 body {
  font-family: 'General Sans' , sans-serif ;
@@ -25,7 +25,7 @@ body {
   }
   @font-face {
     font-family: 'robert-regular';
-    src: url('/fonts/rober-regular.woff2') format('woff2') ;
+    src: url('/fonts/robert-regular.woff2') format('woff2') ;
   }
   @font-face {
     font-family: 'zentry-regular' ;
